@@ -1,33 +1,39 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills.js"
+    "static/chunks/polyfills-fa276ba060a4a8ac7eef.js"
   ],
-  "devFiles": [
-    "static/chunks/react-refresh.js"
-  ],
-  "ampDevFiles": [
-    "static/chunks/webpack.js",
-    "static/chunks/amp.js"
-  ],
+  "devFiles": [],
+  "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/development/_buildManifest.js",
-    "static/development/_ssgManifest.js"
+    "static/MUnXGLL6dYiaUqrb5j661/_buildManifest.js",
+    "static/MUnXGLL6dYiaUqrb5j661/_ssgManifest.js"
   ],
   "pages": {
     "/": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/index.js"
+      "static/chunks/main-d8ed6497c242373e7302.js",
+      "static/chunks/webpack-e067438c4cf4ef2ef178.js",
+      "static/chunks/framework.1d36bc031662b4dc4c28.js",
+      "static/chunks/05d954cf.f160567a31657eb6fe37.js",
+      "static/chunks/d7eeaac4.d22fa7007a58eede26df.js",
+      "static/chunks/1bfc9850.04478888bfdd156fad09.js",
+      "static/chunks/95b64a6e.56a7140f3e0697ceae3e.js",
+      "static/chunks/commons.2395489357e08973ae69.js",
+      "static/chunks/pages/index-e3146d761f47ea5fd885.js"
     ],
     "/_app": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/_app.js"
+      "static/chunks/main-d8ed6497c242373e7302.js",
+      "static/chunks/webpack-e067438c4cf4ef2ef178.js",
+      "static/chunks/framework.1d36bc031662b4dc4c28.js",
+      "static/chunks/commons.2395489357e08973ae69.js",
+      "static/css/f8dadf11f1792b179c49.css",
+      "static/chunks/pages/_app-5d463ca0ace139c7c3c7.js"
     ],
     "/_error": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/_error.js"
+      "static/chunks/main-d8ed6497c242373e7302.js",
+      "static/chunks/webpack-e067438c4cf4ef2ef178.js",
+      "static/chunks/framework.1d36bc031662b4dc4c28.js",
+      "static/chunks/commons.2395489357e08973ae69.js",
+      "static/chunks/pages/_error-1121bfec8607cef77446.js"
     ]
   },
   "ampFirstPages": []
