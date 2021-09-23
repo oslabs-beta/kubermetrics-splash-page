@@ -4,30 +4,24 @@ import { Link } from '../link';
 
 import arrowAngle from '../../assets/arrow-angle.svg';
 
-const BlogCard = ({ image, title, description, path, linkLabel }) => {
+const BlogCard = ({ image, title, linkedIn, github, path, linkLabel }) => {
   return (
     <Box
       sx={styles.blogCard}
-      className={`blogCard ${image === null ? 'noThumb ' : ' '} ${
-        description === null ? 'noDescription  ' : ''
-      } ${linkLabel === null ? 'noLabel ' : ''}`}
+      className={`blogCard ${image === null ? 'noThumb ' : ' '} ${linkLabel === null ? 'noLabel ' : ''}`}
     >
       {image !== null && (
         <Box sx={styles.image}>
-          <Image src={image} alt={title} />
+          <Image src={image} alt={title} sx={styles.img}/>
         </Box>
       )}
 
       <Box sx={styles.content} className="blogContent">
-        <Heading as="h3">
+        <Heading as="h3" style={{display: 'flex', justifyContent: 'center'}}>
           <Link path={path}>{title}</Link>
         </Heading>
-        {description !== null && <Text as="p">{description}</Text>}
-        {linkLabel !== null && (
-          <Link sx={styles.linkLabel} path={path}>
-            {linkLabel} <Image src={arrowAngle} alt="angle icon" />
-          </Link>
-        )}
+        {linkedIn !== null && <a href={linkedIn} as="p" style={{fontSize: '20px', color: 'white', display: 'flex', justifyContent: 'center'}}>LinkedIn</a>}
+        {github !== null && <a href={github} as="p" style={{fontSize: '20px', color: 'white', display: 'flex', justifyContent: 'center'}}>Github</a>}
       </Box>
     </Box>
   );
@@ -36,6 +30,10 @@ const BlogCard = ({ image, title, description, path, linkLabel }) => {
 export default BlogCard;
 
 const styles = {
+  img: {
+    height: '390px',
+    width:  '370px'
+  },
   blogCard: {
     position: 'relative',
     overflow: 'hidden',
@@ -91,9 +89,11 @@ const styles = {
     },
   },
   content: {
+    display: 'flex',
+    flexFlow: 'column wrap',
     h3: {
-      fontSize: '18px',
-      color: '#0F2137',
+      fontSize: '28px',
+      color: 'white',
       lineHeight: 1.67,
       fontWeight: 700,
       mt: '20px',
@@ -103,16 +103,16 @@ const styles = {
       },
     },
     p: {
-      fontSize: '16px',
+      fontSize: '40px',
       lineHeight: 1.87,
-      color: '#0F2137',
+      color: 'white',
       opacity: 0.6,
       mb: '15px',
     },
   },
   linkLabel: {
-    color: '#3183FF',
-    fontSize: '16px',
+    color: 'white',
+    fontSize: '30px',
     fontWeight: '500',
     img: {
       ml: '6px',

@@ -9,8 +9,8 @@ import Services from 'sections/services';
 import Jackpot from 'sections/jackpot';
 import CallToAction from 'sections/call-to-action';
 import Featured from 'sections/featured';
-import Pricing from 'sections/pricing';
-import Testimonials from 'sections/testimonials';
+// import Pricing from 'sections/pricing';
+// import Testimonials from 'sections/testimonials';
 import Blogs from 'sections/blogs';
 import FAQ from 'sections/faq';
 import Subscribe from 'sections/subscribe';
@@ -20,17 +20,17 @@ export default function IndexPage() {
     <ThemeProvider theme={theme}>
       <StickyProvider>
         <Layout>
-          <SEO title="Startup Landing 014" />
+          <SEO title="Kubermetrics" />
           <Banner />
-          <Services />
-          <Jackpot />
-          <CallToAction />
+          {/* <Services /> */}
+          {/* <Jackpot />
+          <CallToAction /> */}
           <Featured />
-          <Pricing />
-          <Testimonials />
+          {/* <Pricing /> */}
+          {/* <Testimonials /> */}
           <Blogs />
-          <FAQ />
-          <Subscribe />
+          {/* <FAQ /> */}
+          {/* <Subscribe /> */}
         </Layout>
       </StickyProvider>
     </ThemeProvider>

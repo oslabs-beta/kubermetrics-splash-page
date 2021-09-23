@@ -15,7 +15,7 @@ export default function Header({ className }) {
       <header sx={styles.header} className={className}>
         <Container sx={styles.container}>
           {/* <Logo image={logoImage} /> */}
-          <Logo image={logoText} />
+          {/* <Logo image={logoText} /> */}
 
           <Flex as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }, i) => (
@@ -33,14 +33,6 @@ export default function Header({ className }) {
               </ScrollLink>
             ))}
           </Flex>
-
-          <Link
-            path="/"
-            ml={2}
-            label="Purchase Now"
-            sx={styles.headerBtn}
-            variant="buttons.primary"
-          />
 
           <MobileDrawer />
         </Container>
@@ -70,7 +62,7 @@ const styles = {
     fontWeight: 'normal',
     py: '25px',
     width: '100%',
-    height: '100px',
+    height: '60px',
     position: 'fixed',
     top: 0,
     left: 0,

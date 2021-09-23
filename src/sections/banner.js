@@ -1,7 +1,9 @@
 import React from 'react';
 import { Box, Container, Image, Heading } from 'theme-ui';
+import { AiFillGithub } from 'react-icons/ai';
 import { keyframes } from '@emotion/core';
 import logoImage from 'assets/km-logo.png';
+import logoText from 'assets/km-text.png';
 import bannerImage from 'assets/banner-mockup.png';
 import bannerIcon1 from 'assets/banner-icon-1-1.svg';
 import bannerIcon2 from 'assets/banner-icon-1-2.svg';
@@ -15,52 +17,11 @@ const Banner = () => {
   return (
     <Box as="section" id="banner" sx={styles.banner}>
       <Container sx={styles.container}>
-        <Image
-          sx={styles.bannerIcon1}
-          className="bannerIcon"
-          alt="banner icon"
-          src={bannerIcon1}
-        />
-        <Image
-          sx={styles.bannerIcon2}
-          className="bannerIcon"
-          alt="banner icon"
-          src={bannerIcon2}
-        />
-        <Image
-          sx={styles.bannerIcon3}
-          className="bannerIcon"
-          alt="banner icon"
-          src={bannerIcon3}
-        />
-        <Image
-          sx={styles.bannerIcon4}
-          className="bannerIcon"
-          alt="banner icon"
-          src={bannerIcon4}
-        />
-        <Image
-          sx={styles.bannerIcon5}
-          className="bannerIcon"
-          alt="banner icon"
-          src={bannerIcon5}
-        />
-        <Image
-          sx={styles.bannerIcon6}
-          className="bannerIcon"
-          alt="banner icon"
-          src={bannerIcon6}
-        />
-        <Image
-          sx={styles.bannerIcon7}
-          className="bannerIcon"
-          alt="banner icon"
-          src={bannerIcon7}
-        />
-
         <Image sx={styles.logo} src={logoImage} alt="logo image" />
-        <Heading as="h2">Create beautiful landing page in few minutes</Heading>
-        <Image src={bannerImage} sx={styles.bannerImage} alt="banner moc" />
+        <Image sx={styles.text} src={logoText} alt="logo image" />
+        <br/>
+        <br/>
+        <a style={styles.github} href="https://github.com/oslabs-beta/kubermetrics"><AiFillGithub /> Github</a>
       </Container>
     </Box>
   );
@@ -128,6 +89,11 @@ const bannerAnim3 = keyframes`
 `;
 
 const styles = {
+  github: {
+    fontSize: '30px',
+    color: 'white',
+    m: '20px'
+  },
   banner: {
     overflow: 'hidden',
     backgroundColor: '#1a1e21',
@@ -147,8 +113,19 @@ const styles = {
   },
   logo: {
     display: 'flex',
-    height: '100px',
+    height: '200px',
     mx: 'auto',
+    mb: '60px'
+    // display: 'block',
+    // borderRadius: '50%',
+    // mx: 'auto',
+    // boxShadow: '0px 15px 35px rgba(65, 104, 139, 0.12)',
+  },
+  text: {
+    display: 'flex',
+    height: '50px',
+    mx: 'auto',
+    mb: '40px'
     // display: 'block',
     // borderRadius: '50%',
     // mx: 'auto',

@@ -3,10 +3,14 @@ import { Box, Container, Button } from 'theme-ui';
 import { keyframes } from '@emotion/core';
 import BlockTitle from 'components/block-title';
 import Image from 'components/image';
-import { AiFillDollarCircle, AiFillPieChart } from 'react-icons/ai';
+import { AiFillDollarCircle, AiFillPieChart, AiFillHome } from 'react-icons/ai';
 import { FaBriefcase, FaCog } from 'react-icons/fa';
 import tabImage1 from 'assets/tab-image-1.png';
+import homePage from 'assets/home-page.gif';
+import metricsPage from 'assets/metrics-page.gif';
+import alertsPage from 'assets/alerts-page.gif';
 import dotPattern from 'assets/dot-pattern.svg';
+
 
 const Featured = () => {
   const [tab, setTab] = useState({
@@ -43,8 +47,8 @@ const Featured = () => {
     <Box as="section" sx={styles.featured}>
       <Container sx={styles.container}>
         <BlockTitle
-          title="What the features of product"
-          text="Introducing all screen details"
+          title="Features"
+          text="Kubernetes Monitoring Made Simple"
         />
         <Box sx={styles.tabButtonTopWrapper}>
           <Box sx={styles.tabButtonWrapper}>
@@ -52,44 +56,37 @@ const Featured = () => {
               onClick={() => handleTab('budget')}
               className={`${tab.active === 'budget' ? 'active' : ''}`}
             >
-              <AiFillDollarCircle />
-              Budget Overview
+              <AiFillHome />
+              Home Page
             </Button>
             <Button
               onClick={() => handleTab('adjust')}
               className={`${tab.active === 'adjust' ? 'active' : ''}`}
             >
               <FaCog />
-              Create & adjust
+              Metrics Page
             </Button>
             <Button
               onClick={() => handleTab('report')}
               className={`${tab.active === 'report' ? 'active' : ''}`}
             >
               <AiFillPieChart />
-              View Reports
-            </Button>
-            <Button
-              onClick={() => handleTab('create')}
-              className={`${tab.active === 'create' ? 'active' : ''}`}
-            >
-              <FaBriefcase />
-              Create & adjust
+              Alerts Page
             </Button>
           </Box>
         </Box>
         <Box sx={styles.tabContent}>
           {tab.active === 'budget' && (
-            <Image src={tabImage1} alt="tab image" className="tabImage" />
+            <Image src={homePage} alt="tab image" className="tabImage" sx={styles.img} />
           )}
           {tab.active === 'create' && (
-            <Image src={tabImage1} alt="tab image" className="tabImage" />
+            <Image src={metricsPage} alt="tab image" className="tabImage" sx={styles.img}/>
           )}
           {tab.active === 'adjust' && (
-            <Image src={tabImage1} alt="tab image" className="tabImage" />
+            <Image src={metricsPage} alt="tab image" className="tabImage" sx={styles.img} />
           )}
           {tab.active === 'report' && (
-            <Image src={tabImage1} alt="tab image" className="tabImage" />
+            <Image src={alertsPage} alt="tab image" className="tabImage" sx={styles.img} />
           )}
         </Box>
       </Container>
@@ -110,7 +107,12 @@ const fadeIn = keyframes`
 const styles = {
   featured: {
     pt: ['80px', null, null, null, '80px', null, '100px'],
-    backgroundColor: '#F9FAFC',
+    backgroundColor: '#1a1e21',
+    height: '1000px'
+  },
+  img: {
+    borderRadius: '10px',
+    boxShadow: '0px 0px 9px 5px rgba(232,232,232,0.35)'
   },
   container: {
     position: 'relative',
@@ -137,7 +139,7 @@ const styles = {
       flexShrink: '0',
       border: 0,
       backgroundColor: 'rgba(0,0,0,0)',
-      color: '#0F2137',
+      color: 'white',
       fontSize: ['14px', null, null, null, '18px'],
       fontWeight: 500,
       lineHeight: 1,
@@ -152,9 +154,9 @@ const styles = {
       },
       '&:hover, &.active': {
         backgroundColor: 'rgba(0,0,0,0)',
-        color: '#0F2137',
+        color: 'white',
         svg: {
-          color: '#0F2137',
+          color: 'white',
           opacity: 1,
         },
         '&::before': {

@@ -4,10 +4,10 @@ export default {
   colors: {
     text: '#343D48', // body color and primary color
     text_secondary: '#02073E', // secondary body color
-    heading: '#02073E', // primary heading color
-    heading_secondary: '#343D48', // heading color
-    background: '#FFFFFF', // body background color
-    background_secondary: '#F9FBFD', // secondary background color
+    heading: 'white', // primary heading color
+    heading_secondary: 'white', // heading color
+    background: '#111617', // body background color
+    background_secondary: '#1a1e21', // secondary background color
     border_color: '#E9EDF5', // border color
     primary: '#f5066b', // primary button and link color
     secondary: '#793677', // secondary color - can be used for hover states
@@ -70,7 +70,7 @@ export default {
       fontWeight: 'heading',
       fontSize: 4,
       letterSpacing: 'heading',
-      color: 'heading',
+      color: 'white',
     },
     heroPrimary: {
       fontSize: [5, 55],
