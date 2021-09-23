@@ -1,1 +1,0 @@
-# kubermetrics-splash-page
